@@ -1,3 +1,20 @@
-<p>Are you sure you want to delete"{{item}}"?</p>
+<!-- <p>Are you sure you want to delete"{{item}}"?</p>
 
-<a href="{% url 'list' %}">Cancel</a>
+<a href="{% url 'list' %}">Cancel</a> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Task</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete "{{ item.name }}"?</h1>
+    
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Yes, Delete</button>
+    </form>
+    
+    <a href="/">Cancel</a>
+</body>
+</html>
