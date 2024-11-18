@@ -54,10 +54,10 @@
         <input class="btn btn-info" type="submit" name="Create Task">
     </form>
 
-    <div class="todo-list"></div>
+    <div class="todo-list">
 
     {% for task in tasks %}
-        <div>
+        <div class="item-row">
             <a class="btn btn-sm btn-info" href="{% url 'update_task' task.id %}">Update</a>
             <a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">Delete</a>
 
@@ -68,4 +68,5 @@
             {% endif %}
         </div>
     {% endfor %}
+    </div>
 </div>
